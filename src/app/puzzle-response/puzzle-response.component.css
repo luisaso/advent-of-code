@@ -1,0 +1,25 @@
+.title {
+  color: rgb(31, 155, 0);
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.open-solutions {
+  animation: openSolution 250ms ease-in 0s 1 normal forwards;
+}
+
+@keyframes openSolution {
+	0% {
+		opacity: 0;
+		transform: scaleY(0);
+		transform-origin: 100% 0%;
+	}
+
+	100% {
+		opacity: 1;
+		transform: scaleY(1);
+		transform-origin: 100% 0%;
+	}
+}
