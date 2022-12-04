@@ -8,10 +8,10 @@ import { Solution } from 'src/app/models/solution.model';
 })
 export class Day2SolutionService {
 
-  inputData: string[] = [];
 
   solution = new Subject<Solution>();
 
+  private inputData: string[] = [];
   private solutionPost: Solution = new Solution();
   private signPointsMap = new Map([
     ['X', 1],

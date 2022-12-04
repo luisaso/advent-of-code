@@ -7,11 +7,10 @@ import { Solution } from 'src/app/models/solution.model';
   providedIn: 'root'
 })
 export class Day3SolutionService {
-
-  inputData!: { rucksack: { firstCompartment: string, lastCompartment: string }[] };
-  inputDataSecondPart!: { group: { rucksack: string[] }[] }
-
   solution = new Subject<Solution>();
+
+  private inputData!: { rucksack: { firstCompartment: string, lastCompartment: string }[] };
+  private inputDataSecondPart!: { group: { rucksack: string[] }[] }
   private solutionPost: Solution = new Solution();
 
   constructor(private http: HttpClient) { }

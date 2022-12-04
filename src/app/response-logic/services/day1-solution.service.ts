@@ -8,14 +8,14 @@ import { Solution } from 'src/app/models/solution.model';
 })
 export class Day1SolutionService {
 
-  inputData!: {
+
+  solution = new Subject<Solution>();
+
+  private inputData!: {
     elf: {
       foodCalories: number[]
     }[]
   };
-
-  solution = new Subject<Solution>();
-
   private solutionPost: Solution = new Solution();
 
   constructor(private http: HttpClient) { }
