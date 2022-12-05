@@ -4,6 +4,7 @@ import { Day1SolutionService } from '../services/day1-solution.service';
 import { Day2SolutionService } from '../services/day2-solution.service';
 import { Day3SolutionService } from '../services/day3-solution.service';
 import { Day4SolutionService } from '../services/day4-solution.service';
+import { Day5SolutionService } from '../services/day5-solution.service';
 
 @Component({
   selector: 'app-all-response-logic',
@@ -19,6 +20,7 @@ export class AllResponseLogicComponent implements OnInit {
     private day2SolutionService: Day2SolutionService,
     private day3SolutionService: Day3SolutionService,
     private day4SolutionService: Day4SolutionService,
+    private day5SolutionService: Day5SolutionService,
   ) { }
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class AllResponseLogicComponent implements OnInit {
     this.day2Solution();
     this.day3Solution();
     this.day4Solution();
+    this.day5Solution();
   }
 
   private day1Solution() {
@@ -55,6 +58,14 @@ export class AllResponseLogicComponent implements OnInit {
   private day4Solution() {
     this.day4SolutionService.solvePuzzle();
     this.day4SolutionService.solution.subscribe((solution: Solution) => {
+      this.solutions.push(solution);
+      this.solutions.sort((a, b) => a.index - b.index)
+    })
+  }
+
+  private day5Solution() {
+    this.day5SolutionService.solvePuzzle();
+    this.day5SolutionService.solution.subscribe((solution: Solution) => {
       this.solutions.push(solution);
       this.solutions.sort((a, b) => a.index - b.index)
     })
