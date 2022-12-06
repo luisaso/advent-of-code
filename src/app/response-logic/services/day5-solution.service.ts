@@ -27,7 +27,7 @@ export class Day5SolutionService {
 
   solvePuzzle(): any {
     this.solutionPost.title = 'Day 5: Supply Stacks';
-    this.solutionPost.index = 5;
+    this.solutionPost.day = 5;
     this.readFile();
   }
 

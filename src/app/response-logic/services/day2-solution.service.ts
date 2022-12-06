@@ -42,7 +42,7 @@ export class Day2SolutionService {
 
   solvePuzzle(): any {
     this.solutionPost.title = 'Day 2: Rock Paper Scissors';
-    this.solutionPost.index = 2;
+    this.solutionPost.day = 2;
     this.readFile();
   }
 

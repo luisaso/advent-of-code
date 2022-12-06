@@ -2,5 +2,6 @@ export class Solution {
   title!: string;
   solutionOne!: string;
   solutionTwo!: string;
-  index!: number;
+  day!: number;
+  url: string = 'https://adventofcode.com/2022/day/';
 }

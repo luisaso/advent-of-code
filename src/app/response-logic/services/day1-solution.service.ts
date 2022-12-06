@@ -22,7 +22,7 @@ export class Day1SolutionService {
 
   solvePuzzle(): any {
     this.solutionPost.title = 'Day 1: Calorie Counting';
-    this.solutionPost.index = 1;
+    this.solutionPost.day = 1;
     this.readFile();
   }
 

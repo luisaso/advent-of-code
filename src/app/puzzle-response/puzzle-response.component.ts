@@ -13,7 +13,8 @@ export class PuzzleResponseComponent implements OnInit {
   title!: string;
   solutionPartOne!: string;
   solutionPartTwo!: string;
-  isOpened: boolean = false;;
+  url!: string;
+  isOpened: boolean = false;
 
   constructor() { }
 
@@ -21,6 +22,7 @@ export class PuzzleResponseComponent implements OnInit {
     this.title = this.solution?.title;
     this.solutionPartOne = this.solution?.solutionOne;
     this.solutionPartTwo = this.solution?.solutionTwo;
+    this.url = this.solution?.url + this.solution?.day;
   }
 
   showSolution() {

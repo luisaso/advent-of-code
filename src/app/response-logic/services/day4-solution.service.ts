@@ -27,7 +27,7 @@ export class Day4SolutionService {
 
   solvePuzzle(): any {
     this.solutionPost.title = 'Day 4: Camp Cleanup';
-    this.solutionPost.index = 4;
+    this.solutionPost.day = 4;
     this.readFile();
   }
 
