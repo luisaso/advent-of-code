@@ -5,6 +5,7 @@ import { Day2SolutionService } from '../services/day2-solution.service';
 import { Day3SolutionService } from '../services/day3-solution.service';
 import { Day4SolutionService } from '../services/day4-solution.service';
 import { Day5SolutionService } from '../services/day5-solution.service';
+import { Day6SolutionService } from '../services/day6-solution.service';
 
 @Component({
   selector: 'app-all-response-logic',
@@ -21,6 +22,7 @@ export class AllResponseLogicComponent implements OnInit {
     private day3SolutionService: Day3SolutionService,
     private day4SolutionService: Day4SolutionService,
     private day5SolutionService: Day5SolutionService,
+    private day6SolutionService: Day6SolutionService,
   ) { }
 
   ngOnInit() {
@@ -29,13 +31,14 @@ export class AllResponseLogicComponent implements OnInit {
     this.day3Solution();
     this.day4Solution();
     this.day5Solution();
+    this.day6Solution();
   }
 
   private day1Solution() {
     this.day1SolutionService.solvePuzzle();
     this.day1SolutionService.solution.subscribe((solution: Solution) => {
       this.solutions.push(solution);
-      this.solutions.sort((a, b) => a.index - b.index)
+      this.solutions.sort((a, b) => a.day - b.day)
     })
   }
 
@@ -43,7 +46,7 @@ export class AllResponseLogicComponent implements OnInit {
     this.day2SolutionService.solvePuzzle();
     this.day2SolutionService.solution.subscribe((solution: Solution) => {
       this.solutions.push(solution);
-      this.solutions.sort((a, b) => a.index - b.index)
+      this.solutions.sort((a, b) => a.day - b.day)
     })
   }
 
@@ -51,7 +54,7 @@ export class AllResponseLogicComponent implements OnInit {
     this.day3SolutionService.solvePuzzle();
     this.day3SolutionService.solution.subscribe((solution: Solution) => {
       this.solutions.push(solution);
-      this.solutions.sort((a, b) => a.index - b.index)
+      this.solutions.sort((a, b) => a.day - b.day)
     })
   }
 
@@ -59,7 +62,7 @@ export class AllResponseLogicComponent implements OnInit {
     this.day4SolutionService.solvePuzzle();
     this.day4SolutionService.solution.subscribe((solution: Solution) => {
       this.solutions.push(solution);
-      this.solutions.sort((a, b) => a.index - b.index)
+      this.solutions.sort((a, b) => a.day - b.day)
     })
   }
 
@@ -67,7 +70,15 @@ export class AllResponseLogicComponent implements OnInit {
     this.day5SolutionService.solvePuzzle();
     this.day5SolutionService.solution.subscribe((solution: Solution) => {
       this.solutions.push(solution);
-      this.solutions.sort((a, b) => a.index - b.index)
+      this.solutions.sort((a, b) => a.day - b.day)
+    })
+  }
+
+  private day6Solution() {
+    this.day6SolutionService.solvePuzzle();
+    this.day6SolutionService.solution.subscribe((solution: Solution) => {
+      this.solutions.push(solution);
+      this.solutions.sort((a, b) => a.day - b.day)
     })
   }
 }
